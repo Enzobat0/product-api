@@ -165,19 +165,6 @@ exports.deleteProduct = async (req, res) => {
 };
 
 
-// GET products by category
-exports.getProductsByCategory = async (req, res) => {
-  try {
-    const products = await Product.find({ category: req.params.categoryId });
-    if (products.length === 0) {
-      return res.status(404).json({ message: 'No products found in this category' });
-    }
-    res.status(200).json(products);
-    } catch (err) {
-    res.status(400).json({ message: 'Invalid category ID', error: err.message });
-  }
-}
-
 // GET low stock products
 exports.getLowStockProducts = async (req, res) => {
   try {
