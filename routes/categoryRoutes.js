@@ -9,7 +9,7 @@ router.get('/', categoryController.getAllCategories);
 router.post('/', categoryController.createCategory);
 
 // GET single category
-router.get('/:id', categoryController.getCategoryById);
+router.get('/name/:name', categoryController.getCategoryByName);
 
 // PUT update category
 router.put('/:id', categoryController.updateCategory);

@@ -28,16 +28,16 @@ exports.createCategory = async (req, res) => {
   }
 };
 
-// GET /api/categories/:id
-exports.getCategoryById = async (req, res) => {
+// GET /api/categories/name/:name
+exports.getCategoryByName = async (req, res) => {
   try {
-    const category = await Category.findById(req.params.id);
+    const category = await Category.findOne({ name: req.params.name });
     if (!category) {
       return res.status(404).json({ message: 'Category not found' });
     }
     res.status(200).json(category);
   } catch (err) {
-    res.status(400).json({ message: 'Invalid ID', error: err.message });
+    res.status(400).json({ message: 'Invalid request', error: err.message });
   }
 };
 
