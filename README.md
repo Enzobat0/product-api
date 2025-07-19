@@ -149,7 +149,7 @@ Get all products where total stock is less than the specified threshold.
 - No pagination or advanced search/filtering yet (can be added in a future iteration).
 
 ## Demo Walkthrough
-See the video in this repo (/demo.mp4) for a full walkthrough using Postman showing:
+See the video in this repo (./demo.mkv) for a full walkthrough using Postman showing:
 
 - Product and category creation
 

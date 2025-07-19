@@ -1,4 +1,5 @@
 const Product = require('../models/product');
+const Category = require('../models/category');
 
 // GET all products /api/products
 exports.getAllProducts = async (req, res) => {
